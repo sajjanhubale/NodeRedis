@@ -1,0 +1,24 @@
+{
+  "name": "noderedis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sajjanhubale/NodeRedis.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sajjanhubale/NodeRedis/issues"
+  },
+  "homepage": "https://github.com/sajjanhubale/NodeRedis#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongodb": "^3.0.10",
+    "redis": "^2.8.0"
+  }
+}

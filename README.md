@@ -1,3 +1,4 @@
+### Using Redis with Node.js
 When trying to optimise our applications, one of the first things we look to is caching. Caching involves storing data in a high performance store (many times temporarily) so such data can be retrieved faster at a later time. Redis is an efficient key-value data store that has become very popular for caching. One of the things that makes Redis a good choice is the number of data structures it supports — such as strings, hashes, lists, sets, and so on. This gives us some flexibility!
 
 ##### The first step is to enter the following command to create the initial structure of your new project:
@@ -49,7 +50,6 @@ const client = redis.createClient(port, host);
 
 Now that you know how to connect with Redis from Node.js, let’s see how to store key-value pairs in Redis storage.
 
-
 ```
 const getProjects = (req, res) => {
   database.collection('projects').find({"project_id":req.body.id}).toArray(function(err, col) {
@@ -64,6 +64,7 @@ const getProjects = (req, res) => {
 The above snippets store a simple JSON fetched from database against the key framework and here req.body is the Key.
 
 To retrieve the value of the key do the following:
+```
 const getCache = (req, res) => {
   
   //Check the cache data from the server redis
@@ -76,6 +77,8 @@ const getCache = (req, res) => {
   });
 }
 
+app.get('/projects',getCache);
+```
 client.get() lets you retrieve a key stored in Redis. The value of the key can be accessed via the callback argument reply. If the key doesn’t exist, the value of result will be empty.
 
 ### Conclusion
